@@ -1,0 +1,38 @@
+version = "3.0"
+
+name = "riskscore-batch-inference-repair"
+artifacts = ["/app/"]
+
+[metadata]
+author_name = "Horizon Experts"
+author_email = "business@expertshorizon.com"
+category = "ML"
+subcategory = "Inference"
+tags = ["model-registry", "calibration", "isotonic-regression", "batch-inference", "uncertainty"]
+languages = ["python"]
+difficulty = "advanced"
+expert_time_estimate_hours = 2.5
+
+difficulty_explanation = "Difficulty here is depth rather than breadth: the pipeline turns on a handful of statistical decisions that are each easy to state and hard to get exactly right, and a solution has to be correct on all of them at once because they compose. The monotone recalibration stage is the centre of it. The specification defines the fitted curve only by the property it satisfies, that it is the nondecreasing sequence minimising the weight-weighted squared error against the observations, so an engineer has to recognise this as a least-squares isotonic fit and derive a correct procedure rather than transcribe one. The seed fits it with a running maximum, which is monotone and so looks right on inspection but is a different function, and it also collapses observations sharing an x by unweighted mean, loses the x span of each pooled block so gaps between blocks interpolate wrongly, evaluates the curve at raw_score instead of at the rollout-blended score, and picks its fit entry with a flat segment check that ignores validity windows. The weighted empirical quantile is the other centre: it has to be implemented once for the uncertainty radius and then applied a second time to winsorize extreme residuals beforehand, where the seed falls back to an unweighted nearest-rank cap. Around those sit a robust batch statistic that is only definable over a whole run and so forces a second pass, effective-sample-size gating that skips rather than stops at an underpowered residual level, hierarchical segment resolution that has to be applied consistently in three places, half-life decay whose decayed values feed scoring and the digest while drift stays on the undecayed ones, and an interaction term that must generalise to arbitrarily many factors. None of it is a validation technicality: every error code, bound, and tie-break the tests grade is stated in the specification, absent keys and null values behave identically everywhere, and each individual mistake costs at least fourteen of the 300 tests, the largest over a hundred and sixty, so a partly-correct solution is never a near miss."
+
+solution_explanation = "solve.sh resolves its own directory at runtime with dirname \"$0\", which is the mount point Harbor provides for the solution/ directory, and from that directory's app/ subfolder it copies the corrected riskscore_engine package, score_batch.py, and SPEC.md into /app, overwriting only the buggy application code while leaving the bundled fixtures untouched, then byte-compiles the result to confirm importability."
+
+verification_explanation = "The separate verifier container installs pytest tooling from a pinned lockfile, copies the agent's final /app directory in through the declared artifact, and imports riskscore_engine directly. test.sh runs the entire pytest process, including all imports of and calls into the agent's copied code and its subprocess invocation of score_batch.py, as an unprivileged non-root user via setpriv, while the reward file stays root-owned and writable only by root, so agent-produced code cannot influence the reward channel. It runs 114 scenario cases that call score_request with synthetic registries, snapshots, calibrators, isotonic fits, and residual sets and compare the returned row or error code against oracle-computed values, 92 nested component cases that re-check a single facet of the subtlest scenarios, 70 tests that execute the full batch pipeline against the bundled fixtures and compare each row against oracle-generated golden output, 8 manifest counts checked against golden plus 8 checked against counts recomputed from the agent's own rows, and 8 structural tests covering digest recomputation, canonical ordering, exact row field sets, atomic replacement with no leftover temporary files, idempotent byte-identical reruns, and a subprocess invocation of the CLI entrypoint. Because the scenario cases compare the returned row exactly, SPEC.md states that a score row carries exactly the listed fields and no others, that population_flag appears only on rows emitted by a full run, and that six-decimal rounding happens as part of scoring a request rather than at write time. Every model field, bound, error code, and tie-break the tests grade, including winsor_quantile and its (0,1] range, is named in SPEC.md; this was verified by enumerating all fields and codes referenced anywhere in the suite and confirming each appears in the specification. All golden values are produced by running the reference implementation, never hand-computed."
+
+relevant_experience = "Author has built and delivered multiple Terminal-Bench ML inference and security tasks with rigorous oracle and NOP verification, including earlier versions of this batch scoring pipeline, and has hands-on experience tuning defect interactions and fixture parameters to hit target pass-rate bands."
+
+[verifier]
+timeout_sec = 1800
+environment_mode = "separate"
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 5400
+network_mode = "no-network"
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 900
+cpus = 2
+memory_mb = 8192
+storage_mb = 10240

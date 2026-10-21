@@ -1,0 +1,22 @@
+{"entity_id": "alice", "observed_at": "2026-03-09T22:00:00Z", "snapshot_id": "alice-1", "values": {"age": 41.0, "income": 63.0, "tenure": 5.0}}
+{"entity_id": "alice", "observed_at": "2026-03-05T00:00:00Z", "snapshot_id": "alice-0", "values": {"age": 40.0, "income": 60.0, "tenure": 4.0}}
+{"entity_id": "bob", "observed_at": "2026-03-09T23:50:00Z", "snapshot_id": "bob-1", "values": {"age": 29.0, "income": 48.0, "tenure": 1.0}}
+{"entity_id": "carol", "observed_at": "2026-03-01T00:00:00Z", "snapshot_id": "carol-1", "values": {"age": 52.0, "income": 140.0, "tenure": 12.0}}
+{"entity_id": "dave", "observed_at": "2026-03-09T00:00:00Z", "snapshot_id": "dave-1", "values": {"age": 22.0}}
+{"entity_id": "erin", "observed_at": "2026-03-08T00:00:00Z", "snapshot_id": "erin-1", "values": {"age": 200.0, "income": 70.0, "tenure": 6.0}}
+{"entity_id": "frank", "observed_at": "2026-03-09T12:00:00Z", "snapshot_id": "frank-1", "values": {"age": "not-a-number", "income": 50.0, "tenure": 2.0}}
+{"entity_id": "grace", "observed_at": "2026-03-11T00:00:00Z", "snapshot_id": "grace-future", "values": {"age": 33.0, "income": 59.0, "tenure": 3.0}}
+{"entity_id": "heidi", "observed_at": "2026-03-09T00:00:00Z", "snapshot_id": "heidi-1", "values": {"age": 45.0, "income": 80.0, "tenure": 7.0}}
+{"entity_id": "ivan", "observed_at": "2026-03-09T00:00:00Z", "snapshot_id": "ivan-1", "values": {"age": 37.0, "income": 61.0, "tenure": 3.0}}
+{"entity_id": "judy", "observed_at": "2026-03-09T00:00:00Z", "snapshot_id": "judy-1", "values": {"age": 48.0, "income": 91.0, "tenure": 9.0}}
+{"entity_id": "mallory", "observed_at": "2026-03-09T00:00:00Z", "snapshot_id": "mallory-1", "values": {"age": 31.0, "income": 45.0, "tenure": 2.0}}
+{"entity_id": "niaj", "observed_at": "2026-03-09T00:00:00Z", "snapshot_id": "niaj-1", "values": {"age": 60.0, "income": 115.0, "tenure": 15.0}}
+{"entity_id": "olivia", "observed_at": "2026-03-09T00:00:00Z", "snapshot_id": "olivia-1", "values": {"age": 27.0, "income": 39.0, "tenure": 1.0}}
+{"entity_id": "peggy", "observed_at": "2026-03-09T00:00:00Z", "snapshot_id": "peggy-1", "values": {"age": 44.0, "income": 70.0, "tenure": 5.0}}
+{"entity_id": "quinn", "observed_at": "2026-03-09T00:00:00Z", "snapshot_id": "quinn-1", "values": {"age": 36.0, "income": 58.0, "tenure": 4.0}}
+{"entity_id": "ruth", "observed_at": "2026-03-09T00:00:00Z", "snapshot_id": "ruth-1", "values": {"age": 50.0, "income": 99.0, "tenure": 8.0}}
+{"entity_id": "sybil", "observed_at": "2026-03-09T00:00:00Z", "snapshot_id": "sybil-1", "values": {"age": 39.0, "income": 64.0, "tenure": 3.0}}
+{"entity_id": "trent", "observed_at": "2026-03-09T00:00:00Z", "snapshot_id": "trent-1", "values": {"age": 34.0, "income": 55.0, "tenure": 2.0}}
+{"entity_id": "uma", "observed_at": "2026-03-09T00:00:00Z", "snapshot_id": "uma-1", "values": {"age": 42.0, "income": 68.0, "tenure": 6.0}}
+{"entity_id": "victor", "observed_at": "2026-03-08T00:00:00Z", "snapshot_id": "victor-1", "values": {"age": 33.0, "income": 48.0, "tenure": 3.0}}
+{"entity_id": "wendy", "observed_at": "2026-03-09T18:00:00Z", "snapshot_id": "wendy-1", "values": {"age": 61.0, "income": 140.0, "tenure": 19.0}}

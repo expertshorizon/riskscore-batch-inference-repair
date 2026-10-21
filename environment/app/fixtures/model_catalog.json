@@ -1,0 +1,1357 @@
+[
+ {
+  "active": true,
+  "calibrator_id": "cal-main",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "min_effective_samples": 1.5,
+  "model_id": "global-base",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 1,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "*",
+  "valid_from": "2026-01-01T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  }
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-main",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "feature_half_life_sec": 172800.0,
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "isotonic_id": "iso-violate",
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "min_effective_samples": 2.2,
+  "model_id": "global-base-v2",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 2,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "*",
+  "valid_from": "2026-02-15T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.7,
+   "income": 0.25,
+   "tenure": 0.12
+  },
+  "winsor_quantile": 0.75
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-retail",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "model_id": "retail-a",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 1,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "retail",
+  "valid_from": "2026-01-01T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  }
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-retail",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "feature_half_life_sec": 43200.0,
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "isotonic_id": "iso-dup",
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "min_effective_samples": 1.8,
+  "model_id": "retail-b",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 2,
+  "rollout_weight": 0.35,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "retail",
+  "shadow_calibrator_id": "cal-wide",
+  "valid_from": "2026-02-01T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  },
+  "winsor_quantile": 0.8
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-main",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "model_id": "retail-old",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 9,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "retail",
+  "valid_from": "2026-01-10T00:00:00Z",
+  "valid_to": "2026-01-20T00:00:00Z",
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  }
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-wealth",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.9,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "model_id": "wealth-a",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 1,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "wealth",
+  "valid_from": "2026-01-01T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  }
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-wealth",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.9,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "isotonic_id": "iso-heavy",
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "min_effective_samples": 2.5,
+  "model_id": "wealth-b",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 3,
+  "rollout_weight": 1.0,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "wealth",
+  "shadow_calibrator_id": "cal-main",
+  "valid_from": "2026-01-05T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  },
+  "winsor_quantile": 0.6
+ },
+ {
+  "active": false,
+  "calibrator_id": "cal-main",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "model_id": "inactive-retail",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 5,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "retail",
+  "valid_from": "2026-01-01T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  }
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-wide",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "feature_half_life_sec": 21600.0,
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "isotonic_id": "iso-dup",
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "min_effective_samples": 3.0,
+  "model_id": "student-a",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 1,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "student",
+  "valid_from": "2026-03-01T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  },
+  "winsor_quantile": 0.9
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-main",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "model_id": "broken-scale",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 1,
+  "scale": {
+   "age": 0.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "badscale",
+  "valid_from": "2026-01-01T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  }
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-missing",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "model_id": "broken-calibrator",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 1,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "badcal",
+  "valid_from": "2026-01-01T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  }
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-main",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": -1.0
+  },
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "model_id": "bad-drift",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 1,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "baddrift",
+  "valid_from": "2026-01-01T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  }
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-main",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "feature_half_life_sec": 604800.0,
+  "interactions": [
+   [
+    "age",
+    "income",
+    "tenure",
+    0.05
+   ]
+  ],
+  "intercept": -0.35,
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "min_effective_samples": 1.6,
+  "model_id": "triple-interact",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 1,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "triple",
+  "valid_from": "2026-01-01T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  }
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-main",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "interactions": [
+   [
+    "age",
+    0.2
+   ]
+  ],
+  "intercept": -0.35,
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "model_id": "bad-arity",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 1,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "tripleerr",
+  "valid_from": "2026-01-01T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  }
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-main",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "isotonic_id": "iso-flatten",
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "min_effective_samples": 2.0,
+  "model_id": "hier-wealth",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 1,
+  "rollout_weight": 0.5,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "wealth.private",
+  "shadow_calibrator_id": "cal-retail",
+  "valid_from": "2026-01-01T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  }
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-main",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "feature_half_life_sec": 86400.0,
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "isotonic_id": "iso-violate",
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "min_effective_samples": 2.0,
+  "model_id": "retail-premium-model",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 1,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "retail.premium",
+  "valid_from": "2026-01-01T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  }
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-main",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "model_id": "rollout-bad",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 1,
+  "rollout_weight": 1.4,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "rolloutbad",
+  "shadow_calibrator_id": "cal-retail",
+  "valid_from": "2026-01-01T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  }
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-main",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "model_id": "rollout-missing",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 1,
+  "rollout_weight": 0.5,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "rolloutmissing",
+  "shadow_calibrator_id": "cal-gone",
+  "valid_from": "2026-01-01T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  }
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-main",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "feature_half_life_sec": -100.0,
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "model_id": "halflife-bad",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 1,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "halflifebad",
+  "valid_from": "2026-01-01T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  }
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-main",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "min_effective_samples": 25.0,
+  "model_id": "ess-strict",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 1,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "essstrict",
+  "valid_from": "2026-01-01T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  }
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-main",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "isotonic_id": "iso-gone",
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "model_id": "iso-missing",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 1,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "isomissing",
+  "valid_from": "2026-01-01T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  }
+ },
+ {
+  "active": true,
+  "calibrator_id": "cal-main",
+  "clip": {
+   "age": [
+    18.0,
+    90.0
+   ],
+   "income": [
+    0.0,
+    220.0
+   ],
+   "tenure": [
+    0.0,
+    40.0
+   ]
+  },
+  "coverage": 0.8,
+  "defaults": {
+   "income": 52.0,
+   "tenure": 2.0
+  },
+  "drift_limits": {
+   "age": 3.2,
+   "income": 4.2,
+   "tenure": 3.0
+  },
+  "interactions": [
+   [
+    "age",
+    "income",
+    0.18
+   ]
+  ],
+  "intercept": -0.35,
+  "isotonic_id": "iso-bad",
+  "mean": {
+   "age": 38.0,
+   "income": 55.0,
+   "tenure": 4.0
+  },
+  "model_id": "iso-broken",
+  "required": [
+   "age"
+  ],
+  "residual_max_age_sec": 3000000,
+  "revision": 1,
+  "scale": {
+   "age": 9.0,
+   "income": 18.0,
+   "tenure": 3.0
+  },
+  "segment": "isobroken",
+  "valid_from": "2026-01-01T00:00:00Z",
+  "valid_to": null,
+  "weights": {
+   "age": 0.65,
+   "income": 0.28,
+   "tenure": 0.1
+  }
+ }
+]

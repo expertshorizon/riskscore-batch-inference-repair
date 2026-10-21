@@ -1,0 +1,3 @@
+Our batch scoring service in /app has drifted from the contract it is supposed to implement, which lives in /app/SPEC.md. Several stages disagree with it and the numbers coming out are wrong. Get the code back in line with the spec, error codes included, and make sure one malformed request comes back as an error row rather than taking down the whole run.
+
+Once it is right, run it over /app/fixtures and write /app/output/scores.jsonl and /app/output/run_manifest.json the way the spec describes. Running it again on the same fixtures should swap both files into place and give byte identical output.
